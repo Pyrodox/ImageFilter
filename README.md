@@ -4,7 +4,7 @@ Restart_Function.py is a custom module that has commented instructions in the fi
 
 The main file program asks the user for the absolute/full path of the image file. The program asks for the image editing method and then shows the result. The user is asked if he or she wants to save the file; if they choose yes, then the file is saved under a name that is given to the program afterwards and if no, then the program doesn't save and prints out a message seen in the program. 
 
-**Start of less important information (skip over): **
+**Start of less important information (skip over):**
 
 The program asks if the user wants to continue the program (if they want to loop it or not) and if they do, then the program continues and they are asked if they want to use the same image. If not, then it doesn't ask for a new image and proceeds as usual. However, if the user is asked for the same image and they say "yes" and add the same image, then the program tells the user they already used that image but still continues as usual with the program. Back to the first sentence, if the user types no for continuing the program, the program will just stop. 
 
