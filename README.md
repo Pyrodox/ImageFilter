@@ -8,7 +8,7 @@ The main file program asks the user for the absolute/full path of the image file
 
 The program asks if the user wants to continue the program (if they want to loop it or not) and if they do, then the program continues and they are asked if they want to use the same image. If not, then it doesn't ask for a new image and proceeds as usual. However, if the user is asked for the same image and they say "yes" and add the same image, then the program tells the user they already used that image but still continues as usual with the program. Back to the first sentence, if the user types no for continuing the program, the program will just stop. 
 
-Furthermore, both ".py" files in this repository have while loops that allow them to loop back if the user gives a bad input to give the user another chance to repeat themselves for the correct input.
+Furthermore, both ".py" files in this repository have while loops that allow them to loop back if the user gives a bad input to give the user another chance to repeat themselves for the correct input and try/except lines for the same purpose but for files submitted.
 
 **End of less important information**
 
