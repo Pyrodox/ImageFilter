@@ -155,12 +155,16 @@ while True:
                 check_img_same = ImageEditorClass(user_img)
                 if check_img_same.pixels_check(previous_img) is True:
                     print("Same image but ok...")
-        process_func(user_img)
-        break
+        try:
+            process_func(user_img)
+            break
+        except FileNotFoundError or AttributeError:
+            print("Your file was not found. Please enter the absolute/full path of the image file.")
 
     if confirm_restart() == "yes":
         while True:
             user_confirm_sameimg = input("Would you like to use the same image? ")
+
             if user_confirm_sameimg.lower().strip() in "yes":
                 same_img = True
                 break
