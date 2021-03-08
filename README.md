@@ -10,7 +10,7 @@ The program asks if the user wants to continue the program (if they want to loop
 
 Furthermore, both ".py" files in this repository have while loops that allow them to loop back if the user gives a bad input to give the user another chance to repeat themselves for the correct input.
 
-E**nd of less important information**
+**End of less important information**
 
 The current dictionary of functions: {"grayscale": edit_process.grayscale, "sepia": edit_process.sepia, "invert": edit_process.invert,
                      "emboss": edit_process.emboss, "blur": edit_process.blur, "warm": edit_process.warm,
