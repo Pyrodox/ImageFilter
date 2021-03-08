@@ -152,9 +152,12 @@ while True:
         if same_img is False:
             user_img = input("Please type the full path of your image's file location: ")
             if count >= 2:
-                check_img_same = ImageEditorClass(user_img)
-                if check_img_same.pixels_check(previous_img) is True:
-                    print("Same image but ok...")
+                try:
+                    check_img_same = ImageEditorClass(user_img)
+                    if check_img_same.pixels_check(previous_img) is True:
+                        print("Same image but ok...")
+                except FileNotFoundError or AttributeError:
+                    pass
         try:
             process_func(user_img)
             break
