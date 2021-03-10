@@ -18,14 +18,14 @@ The current dictionary of functions: {"grayscale": edit_process.grayscale, "sepi
                      "pixelate": edit_process.pixelate, "find_edges": edit_process.find_edges,
                      "sharpen": edit_process.sharpen}
       
-1. Grayscale just turns the image into a grayed version.
-2. Sepia turns the image into a sepia version.
-3. Invert creates a contrasted image by inverting the RGB values.
-4. Emboss creates a sort of snowy image; you can search it up as "Emboss pil" to find out more.
-5. Blur makes the image blurry.
-6. Warm asks the user for another input to adjust the warmth of the image by a certain integer (increases red and decreases blue).
-7. Cold does the same thing but makes the image adjusts the cold values (increases blue and decreases red).
-8. Transparent makes the image somewhat transparent.
-9. Pixelate creates a 32 x 32 version of the image to pixelate it.
-10. Find_edges turns it into an image that is akin to white color pencil on a black sheet of paper; you can search it up as "find edges pil" to find out more.
+1. grayscale just turns the image into a grayed version.
+2. sepia turns the image into a sepia version.
+3. invert creates a contrasted image by inverting the RGB values.
+4. emboss creates a sort of snowy image; you can search it up as "Emboss pil" to find out more.
+5. blur makes the image blurry.
+6. warm asks the user for another input to adjust the warmth of the image by a certain integer (increases red and decreases blue).
+7. cold does the same thing but makes the image adjusts the cold values (increases blue and decreases red).
+8. transparent makes the image somewhat transparent.
+9. pixelate creates a 32 x 32 version of the image to pixelate it.
+10. find_edges turns it into an image that is akin to white color pencil on a black sheet of paper; you can search it up as "find edges pil" to find out more.
 11. sharpen uses an averaging kernel (not completely sure what it's called) to draw a slightly sharpened version of the image.
