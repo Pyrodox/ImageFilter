@@ -15,7 +15,8 @@ Furthermore, both ".py" files in this repository have while loops that allow the
 The current dictionary of functions: {"grayscale": edit_process.grayscale, "sepia": edit_process.sepia, "invert": edit_process.invert,
                      "emboss": edit_process.emboss, "blur": edit_process.blur, "warm": edit_process.warm,
                      "cold": edit_process.cold, "transparent": edit_process.transparent,
-                     "pixelate": edit_process.pixelate, "find_edges": edit_process.find_edges}
+                     "pixelate": edit_process.pixelate, "find_edges": edit_process.find_edges,
+                     "sharpen": edit_process.sharpen}
       
 1. Grayscale just turns the image into a grayed version.
 2. Sepia turns the image into a sepia version.
@@ -27,3 +28,4 @@ The current dictionary of functions: {"grayscale": edit_process.grayscale, "sepi
 8. Transparent makes the image somewhat transparent.
 9. Pixelate creates a 32 x 32 version of the image to pixelate it.
 10. Find_edges turns it into an image that is akin to white color pencil on a black sheet of paper; you can search it up as "find edges pil" to find out more.
+11. sharpen uses an averaging kernel (not completely sure what it's called) to draw a slightly sharpened version of the image.
