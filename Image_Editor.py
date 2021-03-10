@@ -1,4 +1,4 @@
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, ImageDraw
 from PIL.ImageFilter import (EMBOSS, GaussianBlur, FIND_EDGES)
 from Shift15.Restart_Function import confirm_restart
 
@@ -115,13 +115,38 @@ class ImageEditorClass:
     def find_edges(self):
         return self.main_img.filter(FIND_EDGES)
 
+    def sharpen(self):
+        kernel = [[0, -.5, 0],
+                  [-.5, 3, -.5],
+                  [0, -.5, 0]]
+
+        middle_kernel = len(kernel) // 2
+        output_image = Image.new("RGB", self.main_img.size)
+        draw = ImageDraw.Draw(output_image)
+
+        for x in range(middle_kernel, self.imgWidth - middle_kernel):
+            for y in range(middle_kernel, self.imgHeight - middle_kernel):
+                intializeset = [0, 0, 0]
+                for a in range(len(kernel)):
+                    for b in range(len(kernel)):
+                        xn = x + a - middle_kernel
+                        yn = y + b - middle_kernel
+                        pixel = self.load_imgpixels[xn, yn]
+                        intializeset[0] += pixel[0] * kernel[a][b]
+                        intializeset[1] += pixel[1] * kernel[a][b]
+                        intializeset[2] += pixel[2] * kernel[a][b]
+
+                draw.point((x, y), (int(intializeset[0]), int(intializeset[1]), int(intializeset[2])))
+        return output_image
+
 
 def process_func(mainimg):
     edit_process = ImageEditorClass(mainimg)
     img_edit_dict = {"grayscale": edit_process.grayscale, "sepia": edit_process.sepia, "invert": edit_process.invert,
                      "emboss": edit_process.emboss, "blur": edit_process.blur, "warm": edit_process.warm,
                      "cold": edit_process.cold, "transparent": edit_process.transparent,
-                     "pixelate": edit_process.pixelate, "find_edges": edit_process.find_edges}
+                     "pixelate": edit_process.pixelate, "find_edges": edit_process.find_edges,
+                     "sharpen": edit_process.sharpen}
 
     while True:
         user_choice = input("Please enter an image edit option:")
